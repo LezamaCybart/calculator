@@ -64,6 +64,7 @@ function display ( value ) {
     } else {
         compute(value);
     }
+    checkDisplayOverflow();
 }
 
 function compute ( value ) {
@@ -94,6 +95,13 @@ function clearDisplay () {
     secondNumber = "";
     operator = "";
     decimalButton.disabled = false;
+}
+
+function checkDisplayOverflow() {
+    if ( inputDisplay.textContent.length == 8 ) {
+        alert("SCREEN OVERFLOW")
+        clearDisplay()
+    }
 }
 
 
