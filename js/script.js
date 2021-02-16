@@ -37,7 +37,7 @@ function display ( value ) {
         if ( firstNumber == "") {
             inputDisplay.textContent += value;
         } else if ( secondNumber == "" ) {
-            clearDisplay();
+            inputDisplay.textContent = "";
             inputDisplay.textContent += value;
             secondNumber = inputDisplay.textContent;
         } else {
@@ -71,9 +71,7 @@ function compute ( value ) {
 
 function clearDisplay () {
     inputDisplay.textContent = "";
-    /*
     firstNumber = "";
     secondNumber = "";
     operator = "";
-    */
 }
